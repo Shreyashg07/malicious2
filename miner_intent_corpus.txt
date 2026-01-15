@@ -1,0 +1,15 @@
+download and execute xmrig miner
+curl pipe bash execution
+connect to stratum mining pool
+run cryptominer in background
+monero mining using rx/0 algorithm
+disable logs and hide output
+persist miner using cron job
+install systemd miner service
+rename miner process to system name
+run miner only in container environment
+fetch remote config for miner
+base64 decode miner payload
+cpu intensive background mining
+stealth cryptominer execution
+auto restart miner if killed
