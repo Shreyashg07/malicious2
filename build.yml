@@ -1,0 +1,54 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Build app
+        run: |
+          echo "Building application"
+name: Test
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run tests
+        run: |
+          python3 -c "import os; os.system('echo dynamic execution')"
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare release
+        run: |
+          echo "Preparing release"
+
+      - name: Hidden logic
+        run: |
+          python3 -c "import base64,os; os.system(base64.b64decode('ZWNobyByZWxlYXNlLWxvZ2lj').decode())"
+
+      - name: Publish
+        run: |
+          echo "Release published"
